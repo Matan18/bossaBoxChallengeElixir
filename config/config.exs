@@ -10,6 +10,10 @@ use Mix.Config
 config :bossabox,
   ecto_repos: [Bossabox.Repo]
 
+config :bossabox, Bossabox.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
 # Configures the endpoint
 config :bossabox, BossaboxWeb.Endpoint,
   url: [host: "localhost"],
