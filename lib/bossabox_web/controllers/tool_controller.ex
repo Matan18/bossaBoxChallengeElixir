@@ -13,7 +13,6 @@ defmodule BossaboxWeb.ToolController do
   def index(conn, %{"tags" => tags}) do
     with tools <- Index.call(tags) do
       conn
-      |> put_status(:created)
       |> json(tools)
     end
   end
@@ -21,7 +20,6 @@ defmodule BossaboxWeb.ToolController do
   def index(conn, _) do
     with tools <- Index.call() do
       conn
-      |> put_status(:created)
       |> json(tools)
     end
   end
@@ -30,15 +28,14 @@ defmodule BossaboxWeb.ToolController do
     with {:ok, %Tool{} = tool} <- Create.call(params) do
       conn
       |> put_status(:created)
-      |> render("create.json", tool: tool)
+      |> json(tool)
     end
   end
 
   def update(conn, %{"id" => id} = params) do
     with {:ok, %Tool{} = tool} <- Update.call(params, id) do
       conn
-      |> put_status(:created)
-      |> render("update.json", tool: tool)
+      |> json(tool)
     end
   end
 
@@ -53,8 +50,8 @@ defmodule BossaboxWeb.ToolController do
   def delete(conn, %{"id" => id}) do
     with {:ok} <- Delete.call(id) do
       conn
-      |> put_status(:ok)
-      |> render("delete.json")
+      |> resp(:no_content, "")
+      |> send_resp()
     end
   end
 end
