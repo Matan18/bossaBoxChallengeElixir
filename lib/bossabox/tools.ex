@@ -6,7 +6,7 @@ defmodule Bossabox.Tool do
 
   @required_params [:title, :link, :description, :tags]
 
-  @derive {Jason.Encoder, only: @required_params ++ [:id]}
+  @derive {Jason.Encoder, only: @required_params ++ [:id, :updated_at, :inserted_at]}
 
   schema "tools" do
     field :title, :string
