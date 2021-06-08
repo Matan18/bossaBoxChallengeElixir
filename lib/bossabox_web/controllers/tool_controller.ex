@@ -30,7 +30,7 @@ defmodule BossaboxWeb.ToolController do
     end
   end
 
-  def index(conn, %{"tags" => tags}) do
+  def index(conn, %{"tag" => tags}) do
     with tools <- Index.call(tags) do
       conn
       |> json(tools)
