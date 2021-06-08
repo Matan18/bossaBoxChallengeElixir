@@ -5,6 +5,7 @@ defmodule Bossabox.Tools.Index do
   def call(tags) do
     Tool
     |> where([t], ^tags in t.tags)
+    |> order_by(:inserted_at)
     |> Repo.all()
   end
 
