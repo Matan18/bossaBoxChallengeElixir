@@ -11,6 +11,7 @@ defmodule Bossabox.Tools.Index do
 
   def call do
     Tool
+    |> order_by(:inserted_at)
     |> Repo.all()
   end
 end
