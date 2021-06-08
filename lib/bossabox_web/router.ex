@@ -20,9 +20,11 @@ defmodule BossaboxWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", BossaboxWeb do
-  #   pipe_through :api
-  # end
+  scope "/tools", BossaboxWeb do
+    pipe_through :api
+
+    resources "/", ToolController, only: [:create, :index, :show, :delete, :update]
+  end
 
   # Enables LiveDashboard only for development
   #
