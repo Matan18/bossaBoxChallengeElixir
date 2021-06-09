@@ -1,5 +1,5 @@
 defmodule Bossabox.Tools.Delete do
-  alias Bossabox.{Tool, Repo}
+  alias Bossabox.{Repo, Tool}
 
   def call(id) do
     get_tool(id)

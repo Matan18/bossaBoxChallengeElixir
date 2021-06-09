@@ -1,7 +1,6 @@
 defmodule BossaboxWeb.ErrorView do
   use BossaboxWeb, :view
-
-  alias Ecto.{Changeset}
+  alias Ecto.Changeset
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

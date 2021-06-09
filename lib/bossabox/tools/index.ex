@@ -1,6 +1,6 @@
 defmodule Bossabox.Tools.Index do
   import Ecto.Query
-  alias Bossabox.{Tool, Repo}
+  alias Bossabox.{Repo, Tool}
 
   def call(tags) do
     Tool

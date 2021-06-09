@@ -1,6 +1,6 @@
 defmodule Bossabox.Tools.Update do
   import Ecto.Changeset
-  alias Bossabox.{Tool, Repo}
+  alias Bossabox.{Repo, Tool}
 
   def call(params, id) do
     params = translate_params(params)

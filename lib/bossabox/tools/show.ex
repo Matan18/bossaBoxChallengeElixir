@@ -1,5 +1,5 @@
 defmodule Bossabox.Tools.Show do
-  alias Bossabox.{Tool, Repo}
+  alias Bossabox.{Repo, Tool}
 
   def call(id) do
     Tool

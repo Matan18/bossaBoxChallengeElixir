@@ -1,5 +1,5 @@
 defmodule Bossabox.Tools.Create do
-  alias Bossabox.{Tool, Repo}
+  alias Bossabox.{Repo, Tool}
 
   def call(params) do
     params
