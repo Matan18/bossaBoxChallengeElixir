@@ -7,9 +7,8 @@
       - [Router](#router)
       - [Controllers](#controllers)
       - [Ecto](#ecto)
-      - [Routes](#routes)
     - [Diagrama da API (blueprint)](/apiblueprint.md)
-     - [License](#license)
+    - [License](LICENCE)
 
 
 Esse é um desafio de api da BossaBox para começar no site, é necessário criar um CRUD(Create, Read, Update, Delete) de ferramentas de desenvolvimento, que terão os atributos title, link, description e tags.
@@ -52,4 +51,4 @@ Clique [aqui](apiblueprint.md) para acessar o diagrama da API
 
 ### License
 
-[MIT](LICENSE)
+[MIT](LICENCE)
