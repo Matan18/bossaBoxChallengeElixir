@@ -12,7 +12,7 @@ defmodule BossaboxWeb.ToolController do
 
   alias BossaboxWeb.FallbackController
 
-  action_fallback FallbackController
+  action_fallback(FallbackController)
 
   def create(conn, params) do
     with {:ok, %Tool{} = tool} <- Create.call(params) do
